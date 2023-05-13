@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Dislike Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header id="header">
+    <a href="https://ko-fi.com/delta911ee" target="_blank" id="devContact">Developer contact</a>
+    <a href="https://github.com/Anarios/return-youtube-dislike" target="_blank" id="apiCredit">API credit</a>
+    <a class="dMode" id="darkMode">Dark mode</a>
+</header>
+
+<div class="flex" id="mainContainer">
+    <div class="search flex">
+        <h1 class="heading" id="heading">YouTube Dislike Viewer</h1>
+        <input type="url" class="url" placeholder="Enter video URL here..">
+        <button class="go">Get dislikes / Enter</button>
+    </div>
+    <div class="info" id="infoContainer">
+        <p class="dislikes"></p>
+        <p class="likes"></p>
+        <p class="ldRatio"></p>
+        <p class="viewCount"></p>
+    </div>
+
+    <dialog class="dialog">
+        <h1 class="title">Oops! An error occured.</h1>
+        <p class="errorText"></p>
+        <button class="ok">Okay</button>
+    </dialog>
+    <script src="app.js"></script>
+</div>
+</html>
