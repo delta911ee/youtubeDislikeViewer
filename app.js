@@ -24,8 +24,14 @@ const numberFormat = new Intl.NumberFormat()
 async function getDislikes(){
     try{
         let videoId
-        if(urlInput.value.includes("=")){
+        if(urlInput.value.includes("=") && !urlInput.value.includes("live") && !urlInput.value.includes("shorts")){
             videoId = urlInput.value.split("=")[1]
+        }
+        else if(urlInput.value.includes("live")){
+            videoId = urlInput.value.split("/")[4].split("?")[0]
+        }
+        else if(urlInput.value.includes("shorts")){
+            videoId = urlInput.value.split("/")[4].split("?")[0]
         }
         else{
             videoId = urlInput.value.split("/")[3]
